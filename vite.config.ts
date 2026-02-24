@@ -12,8 +12,36 @@ export default defineConfig(({mode}) => {
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(__dirname, './src'),
       },
+    },
+    build: {
+      outDir: 'dist',
+      rollupOptions: {
+        external: [
+          'better-sqlite3',
+          'telegraf',
+          'discord.js',
+          'node-cron',
+          'express',
+          'formdata-polyfill',
+          'node-fetch',
+          'undici',
+          /^node:.*/,
+        ],
+      },
+    },
+    optimizeDeps: {
+      exclude: [
+        'better-sqlite3',
+        'telegraf',
+        'discord.js',
+        'node-cron',
+        'express',
+        'formdata-polyfill',
+        'node-fetch',
+        'undici',
+      ],
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.

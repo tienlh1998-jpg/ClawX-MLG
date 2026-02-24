@@ -7,12 +7,6 @@ import { setupDiscordBot } from "./bots/discord.ts";
 import { setupScheduler } from "./scheduler/cron.ts";
 import db from "./db/database.ts";
 
-// Ensure fetch is available in Node.js environment without breaking browser
-if (typeof window === 'undefined' && typeof global !== 'undefined' && !global.fetch) {
-  // Only polyfill if absolutely necessary and in Node environment
-  // Node 18+ has native fetch, so this is usually not needed
-}
-
 dotenv.config();
 
 async function startServer() {
