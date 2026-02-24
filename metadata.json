@@ -1,0 +1,5 @@
+{
+  "name": "ClawX AI Agent",
+  "description": "A personal AI agent with Telegram/Discord integration, tool calling, and long-term memory.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,10 @@
+services:
+  clawx-agent:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./agent_memory.db:/app/agent_memory.db
+    restart: always
