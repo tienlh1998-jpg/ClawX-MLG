@@ -4,7 +4,7 @@ A robust, personal AI agent server inspired by OpenClaw/ZeroClaw. Built with **N
 
 ## Features
 
-- **Multi-Platform**: Chat via Telegram and Discord.
+- **Multi-Platform**: Chat via Telegram.
 - **Advanced Reasoning**: Powered by Gemini 1.5 Pro via LangGraph.
 - **Tool Calling**:
   - `web_scraper`: Extract content from any URL.
@@ -20,8 +20,7 @@ A robust, personal AI agent server inspired by OpenClaw/ZeroClaw. Built with **N
    Copy `.env.example` to `.env` and fill in:
    - `GEMINI_API_KEY`: Your Google AI Studio key.
    - `TELEGRAM_BOT_TOKEN`: From [@BotFather](https://t.me/botfather).
-   - `DISCORD_BOT_TOKEN`: From [Discord Developer Portal](https://discord.com/developers/applications).
-   - `ADMIN_TELEGRAM_ID` / `ADMIN_DISCORD_ID`: Your IDs for security.
+   - `ADMIN_TELEGRAM_ID`: Your ID for security.
 
 2. **Installation**:
    ```bash

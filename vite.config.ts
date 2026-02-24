@@ -17,7 +17,6 @@ export default defineConfig({
     exclude: [
       'better-sqlite3',
       'telegraf',
-      'discord.js',
       'node-cron',
       'express',
       'node-fetch',
@@ -33,7 +32,6 @@ export default defineConfig({
       external: [
         'better-sqlite3',
         'telegraf',
-        'discord.js',
         'node-cron',
         'express',
         'node-fetch',

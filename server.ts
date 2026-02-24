@@ -3,7 +3,6 @@ import { createServer as createViteServer } from "vite";
 import path from "path";
 import dotenv from "dotenv";
 import { setupTelegramBot } from "./bots/telegram.ts";
-import { setupDiscordBot } from "./bots/discord.ts";
 import { setupScheduler } from "./scheduler/cron.ts";
 import db from "./db/database.ts";
 
@@ -50,17 +49,11 @@ async function startServer() {
   });
 
   // Initialize Bots and Scheduler
-  let tgBot, dsBot;
+  let tgBot;
   try {
     tgBot = setupTelegramBot();
   } catch (error) {
     console.error('Failed to setup Telegram bot:', error);
-  }
-
-  try {
-    dsBot = setupDiscordBot();
-  } catch (error) {
-    console.error('Failed to setup Discord bot:', error);
   }
 
   try {
@@ -86,7 +79,6 @@ async function startServer() {
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`ClawX Server running on http://localhost:${PORT}`);
     console.log(`Telegram Bot: ${tgBot ? 'Active' : 'Disabled'}`);
-    console.log(`Discord Bot: ${dsBot ? 'Active' : 'Disabled'}`);
   });
 }
 

@@ -106,7 +106,6 @@ export default function App() {
               <p className="opacity-50">[2024-02-23 20:57:00] Initializing database connection...</p>
               <p className="text-emerald-400">[2024-02-23 20:57:01] Database connected: agent_memory.db</p>
               <p className="opacity-50">[2024-02-23 20:57:02] Starting Telegram bot listener...</p>
-              <p className="opacity-50">[2024-02-23 20:57:03] Starting Discord bot listener...</p>
               <p className="text-blue-400">[2024-02-23 20:57:04] LangGraph workflow compiled successfully.</p>
               <p className="text-emerald-400">[2024-02-23 20:57:05] Server listening on port 3000</p>
               <p className="opacity-50">[2024-02-23 20:57:10] Heartbeat: OK</p>
@@ -122,7 +121,6 @@ export default function App() {
             </h3>
             <div className="space-y-3">
               <AccessItem label="Telegram Admin" status="Configured" />
-              <AccessItem label="Discord Admin" status="Configured" />
               <AccessItem label="API Key" status="Active" />
             </div>
           </div>
